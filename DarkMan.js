@@ -43,24 +43,25 @@ client.on("message", async message => {
     
       .setDescription(`
       
-  
-                   
-━──╮•╭──━
-🛡️ | Security Commands
- anti ban [Number]
- anti kick [Number]
- anti channel [Number]
- anti role [Number]
- anti bot [on / off]
-━──╮•╭──━
-⚙️ | Public Commands
- bot , server , ping , profile , uinvites , hightRole , nick
- user , avatar , roles , emoji
-━──╮•╭──━
-⚡ | Moderation Commands
- , ban , kick , mute , unmute , slowmode , bans
- say,
-unban
+ **
+┏━━━━━°❀•°:🎀 - 🎀:°•❀°━━━━━┓
+${prefix}shelp = Security CmD
+
+▓▓▓▓▓▓ <a:emoji_35:786619950328315955> ▓▓▓▓▓▓
+
+${prefix}phelp = Public CmD
+
+▓▓▓▓▓▓ <a:emoji_35:786619950328315955> ▓▓▓▓▓▓
+
+${prefix}fhelp = Fun CmD
+
+▓▓▓▓▓▓ <a:emoji_35:786619950328315955> ▓▓▓▓▓▓
+
+${prefix}mhelp = MOD CmD
+
+▓▓▓▓▓▓ <a:emoji_35:786619950328315955> ▓▓▓▓▓▓
+┗━━━━━°❀•°:🎀 - 🎀:°•❀°━━━━━┛
+**
 
 `);
     message.channel.send(help);
