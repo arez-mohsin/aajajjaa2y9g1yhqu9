@@ -36,32 +36,13 @@ client.on("ready", async () => {
 //////////
 
 client.on("message", async message => {
-  if (message.content.startsWith(prefix + "help")) {
+  if (message.content.startsWith(prefix + "jjaiI++18nnabananananananannap")) {
     let help = new Discord.MessageEmbed()
     .setColor(RA)
       .setThumbnail(message.author.avatarURL({dynamic: "true"}))
     
       .setDescription(`
       
- **
-┏━━━━━°❀•°:🎀 - 🎀:°•❀°━━━━━┓
-${prefix}shelp = Security CmD
-
-▓▓▓▓▓▓ <a:emoji_35:786619950328315955> ▓▓▓▓▓▓
-
-${prefix}phelp = Public CmD
-
-▓▓▓▓▓▓ <a:emoji_35:786619950328315955> ▓▓▓▓▓▓
-
-${prefix}fhelp = Fun CmD
-
-▓▓▓▓▓▓ <a:emoji_35:786619950328315955> ▓▓▓▓▓▓
-
-${prefix}mhelp = MOD CmD
-
-▓▓▓▓▓▓ <a:emoji_35:786619950328315955> ▓▓▓▓▓▓
-┗━━━━━°❀•°:🎀 - 🎀:°•❀°━━━━━┛
-**
 
 `);
     message.channel.send(help);
@@ -1764,4 +1745,38 @@ if(g.me.voiceChannel && g.me.voiceChannelID !== c.id || !g.me.voiceChannel) c.jo
 } else {
 console.log('Failed To Join: \n The Channel Type isn "Listening."')
 }
+});
+client.on("message", async message => {
+  if (message.content.startsWith(prefix + "help")) {
+    let help = new Discord.MessageEmbed()
+      .setColor("RANDOM")
+    .setTitle("**Help Command**")
+      .setFooter(message.author.username, message.author.displayAvatarURL)
+    .setTimestamp()
+
+
+      .setThumbnail(message.guild.iconURL)
+   .setDescription(`
+ **
+┏━━━━━°❀•°:🎀 - 🎀:°•❀°━━━━━┓
+${prefix}shelp = Security CmD
+
+▓▓▓▓▓▓ <a:emoji_35:786619950328315955> ▓▓▓▓▓▓
+
+${prefix}phelp = Public CmD
+
+▓▓▓▓▓▓ <a:emoji_35:786619950328315955> ▓▓▓▓▓▓
+
+${prefix}fhelp = Fun CmD
+
+▓▓▓▓▓▓ <a:emoji_35:786619950328315955> ▓▓▓▓▓▓
+
+${prefix}mhelp = MOD CmD
+
+▓▓▓▓▓▓ <a:emoji_35:786619950328315955> ▓▓▓▓▓▓
+┗━━━━━°❀•°:🎀 - 🎀:°•❀°━━━━━┛
+**
+`);
+    message.channel.send(help);
+  }
 });
