@@ -59,8 +59,8 @@ client.on("message", async message => {
 ━──╮•╭──━
 ⚡ | Moderation Commands
  , ban , kick , mute , unmute , slowmode , bans
- say , unban[userid/all]
- __ [SUPPORT](https://discord.gg/bRN8hde6) __ - __ [INVITE](https://discord.com/api/oauth2/authorize?client_id=806636450392965120&permissions=8&scope=bot) __
+ say,
+unban
 
 `);
     message.channel.send(help);
@@ -111,7 +111,7 @@ client.on("message", message => {
         );
       config[message.guild.id].banLimit = num;
       message.channel.send(
-        `**<:yes:786618192734060562> | Changed To : ${config[message.guild.id].banLimit} **`
+        `**<:yes:786618192734060562> | Successful Changed To : ${config[message.guild.id].banLimit} **`
       );
     }
     if (message.content.startsWith(prefix + "anti kick")) {
@@ -119,71 +119,71 @@ client.on("message", message => {
         return message.channel.send("**<a:warning:786619837383573544>| Type A `Number` .**");
       if (isNaN(num))
         return message.channel.send(
-          "**" + ghallat + " | Only Type A `Number` .**"
+          "**<a:warning:786619837383573544> | Only Type A `Number` .**"
         );
       config[message.guild.id].kickLimits = num;
       message.channel.send(
-        `**✔ | Changed To : ${config[message.guild.id].kickLimits}**`
+        `**<:yes:786618192734060562> | Successful Changed To : ${config[message.guild.id].kickLimits}**`
       );
     }
     if (message.content.startsWith(prefix + "anti role")) {
       if (!num)
-        return message.channel.send("**" + ghallat + " | Type A `Number` .**");
+        return message.channel.send("**<a:warning:786619837383573544> | Type A `Number` **");
       if (isNaN(num))
         return message.channel.send(
-          "**" + ghallat + " | Only Type A `Number` .**"
+          "**<a:warning:786619837383573544> | Only Type A `Number` .**"
         );
       config[message.guild.id].roleDelLimit = num;
       message.channel.send(
-        `**✔ | Changed To : ${config[message.guild.id].roleDelLimit}**`
+        `**<:yes:786618192734060562> | Successful Changed To : ${config[message.guild.id].roleDelLimit}**`
       );
     }
     if (message.content.startsWith(prefix + "anti role")) {
       if (!num)
-        return message.channel.send("**" + ghallat + " | Type A `Number` .**");
+        return message.channel.send("**<a:warning:786619837383573544> | Type A `Number` .**");
       if (isNaN(num))
         return message.channel.send(
-          "**" + ghallat + " | Only Type A `Number` .**"
+          "**<a:warning:786619837383573544> | Only Type A `Number` .**"
         );
       config[message.guild.id].roleCrLimits = num;
       message.channel.send(
-        `**✔ | Changed To : ${config[message.guild.id].roleCrLimits}**`
+        `**<:yes:786618192734060562> | Successful Changed To : ${config[message.guild.id].roleCrLimits}**`
       );
     }
     if (message.content.startsWith(prefix + "anti channel")) {
       if (!num)
-        return message.channel.send("**" + ghallat + " | Type A `Number` .**");
+        return message.channel.send("**<a:warning:786619837383573544> | Type A `Number` .**");
       if (isNaN(num))
         return message.channel.send(
-          "**" + ghallat + " | Only Type A `Number` .**"
+          "**<a:warning:786619837383573544> | Only Type A `Number` .**"
         );
       config[message.guild.id].chaDelLimit = num;
       message.channel.send(
-        `**✔ | Changed To : ${config[message.guild.id].chaDelLimit}**`
+        `**<:yes:786618192734060562> | Successful Changed To : ${config[message.guild.id].chaDelLimit}**`
       );
     }
     if (message.content.startsWith(prefix + "anti channel")) {
       if (!num)
-        return message.channel.send("**" + ghallat + " | Type A `Number` .**");
+        return message.channel.send("**<a:warning:786619837383573544> | Type A `Number` .**");
       if (isNaN(num))
         return message.channel.send(
-          "**" + ghallat + " | Only Type A `Number` .**"
+          "**<a:warning:786619837383573544> | Only Type A `Number` .**"
         );
       config[message.guild.id].chaCrLimit = num;
       message.channel.send(
-        `**✔ | Changed To : ${config[message.guild.id].chaCrLimit}**`
+        `**<:yes:786618192734060562> | Successful Changed To : ${config[message.guild.id].chaCrLimit}**`
       );
     }
     if (message.content.startsWith(prefix + "anti time")) {
       if (!num)
-        return message.channel.send("**" + ghallat + " | Type A `Number` .**");
+        return message.channel.send("**<a:warning:786619837383573544> | Type A `0.1 or 0.10` .**");
       if (isNaN(num))
         return message.channel.send(
-          "**" + ghallat + " | Only Type A `Number` .**"
+          "**<a:warning:786619837383573544> | Only Type A `Number` .**"
         );
       config[message.guild.id].time = num;
       message.channel.send(
-        `**✔ | Changed To : ${config[message.guild.id].time}**`
+        `**<:yes:786618192734060562> | Successful Changed To : ${config[message.guild.id].time}**`
       );
     }
     fs.writeFile("./configg.json", JSON.stringify(config, null, 2), function(
@@ -690,7 +690,7 @@ client.on("message", message => {
       .addField("**ID Bot**", `[ ${client.user.id} ]`, true)
       .addField("**Prefix Bot**", `[ ${prefix} ]`, true)
       .addField("**Bot Language**", `[ Java Script ]`, true)
-      .setFooter("Security");
+      .setFooter("SOURCE PRO");
 
     message.channel.send(tnx);
   }
@@ -858,36 +858,61 @@ client.on("message", message => {
 
 ////////
 
-client.on("message", msg => {
-  if (msg.content === "Slaw") {
-    msg.reply(
-      "سلاوبەخێربێی بۆ سێرفەرەکەمان تکایەچاوەرێکە تارۆل بەدەستێک دێتە خەت"
-    );
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+});
+
+client.on('message', msg => {
+  if (msg.content === 'slaw') {
+    msg.reply('<a:slaw:786289752570986497> لە تۆش ❤');
   }
 });
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+});
+
+client.on('message', msg => {
+  if (msg.content === 'Slaw') {
+    msg.reply('<a:slaw:786289752570986497> لە تۆش ❤');
+  }
+});
+client.on('message', msg => {
+  if (msg.content === 'SLAW') {
+    msg.reply('<a:slaw:786289752570986497> لە تۆش ❤');
+  }
+});
+client.on('message', msg => {
+  if (msg.content === 'hi') {
+    msg.reply('Welcome Bro ❤');
+  }
+});
+client.on('message', msg => {
+  if (msg.content === 'Hi') {
+    msg.reply('Welcome Bro ❤');
+  }
+});
+client.on('message', msg => {
+  if (msg.content === 'hello') {
+    msg.reply('Welcome Bro ❤');
+  }
+});
+client.on('message', msg => {
+  if (msg.content === 'Hello') {
+    msg.reply('Welcome Bro ❤');
+  }
+});
+client.on('message', msg => {
+  if (msg.content === 'HELLO') {
+    msg.reply('Welcome Bro ❤');
+  }
+});
+
 
 ////////
 
-client.on("message", msg => {
-  if (msg.content === "سڵاو") {
-    msg.reply(
-      "سلاوبەخێربێی بۆ سێرفەرەکەمان تکایەچاوەرێکە تارۆل بەدەستێک دێتە خەت"
-    );
-  }
-});
+
 
 //////
-
-client.on("message", message => {
-  //zalm
-  if (message.content.includes("discord.gg")) {
-    if (!message.member.hasPermission("MANAGE_EMOJIS")) {
-      message.delete();
-      message.reply("جاری دووەم ڕێک باندی ئاگاداربکە تکایە ڕێکلام مەکە");
-      message.react("🚫");
-    }
-  }
-});
 
 ////////
 
@@ -909,7 +934,7 @@ client.on("message", prof => {
     var professor = new Discord.MessageEmbed()
       .setAuthor(client.user.username)
       .setThumbnail(client.user.avatarURL())
-      .setColor("#0c0b0b")
+      .setColor("BLACK")
       .setTitle("Your Info User")
       .addField(" ▶️| Your Name", `<@${prof.author.id}>`)
       .addField(" 🆔| Your ID", `${prof.author.id}`)
@@ -1231,9 +1256,9 @@ client.on("message", async message => {
 ///////
 
 client.on("message", message => {
-  if (message.content.startsWith(prefix + "support")) {
+  if (message.content.startsWith(prefix + "sp")) {
     const embed = new Discord.MessageEmbed()
-      .setDescription(`[Support](https://discord.gg/)`)
+      .setDescription(`[Support](https://discord.gg/TXM3dArZwW)join for helping and supported bot 💜`)
       .setTimestamp()
       .setFooter(`By: ${message.author.tag}`)
       .setAuthor(client.user.username)
@@ -1255,9 +1280,9 @@ client.on("message", professor => {
     };
     var profe = new Discord.MessageEmbed()
       .setAuthor(professor.guild.name)
-      .setColor("#0000")
-      .setTitle("AntiBot On")
-      .setDescription(`The AntiBots Join Is On  | By <@${professor.author.id}>`)
+      .setColor("GREEN")
+      .setTitle("AntiBot")
+      .setDescription(`Anti Bots Enable <a:emoji_35:786619950328315955>`)
       .setTimestamp();
     professor.channel.send(profe).then(p => {
       professor.react("✅");
@@ -1280,10 +1305,10 @@ client.on("message", professor => {
     };
     var profe = new Discord.MessageEmbed()
       .setAuthor(professor.guild.name)
-      .setColor("#0000")
-      .setTitle("AntiBot Off")
+      .setColor("RED")
+      .setTitle("AntiBot")
       .setDescription(
-        `The AntiBots Join Is Off  | By <@${professor.author.id}>`
+        `Anti Bots Disabled`
       )
       .setTimestamp();
     professor.channel.send(profe).then(p => {
