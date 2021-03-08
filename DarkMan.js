@@ -1391,3 +1391,114 @@ client.on("message", message => {
     message.channel.send(embed);
   }
 })
+client.on("message", async message => {
+  if (message.content.startsWith(prefix + "shelp")) {
+    let help = new Discord.MessageEmbed()
+      .setColor("RANDOM")
+    .setTitle("**Security CmD**")
+      .setFooter(message.author.username, message.author.displayAvatarURL)
+    .setTimestamp()
+
+
+      .setThumbnail(message.guild.iconURL)
+   .setDescription(`
+**
+> ${prefix}anti ban [numbers]
+> ${prefix}anti kick [numbers]
+> ${prefix}anti role [numbers]
+> ${prefix}anti channel [numbes]
+> ${prefix}anti bot [on/off]
+> ${prefix}anti prune [on/off]
+> ${prefix}anti template [on/off] 
+
+** 
+
+`);
+    message.channel.send(help);
+  }
+});
+client.on("message", async message => {
+  if (message.content.startsWith(prefix + "phelp")) {
+    let help = new Discord.MessageEmbed()
+      .setColor("RANDOM")
+    .setTitle("**Public CmD**")
+      .setFooter(message.author.username, message.author.displayAvatarURL)
+    .setTimestamp()
+
+
+      .setThumbnail(message.guild.iconURL)
+   .setDescription(`
+**
+> ${prefix}server
+> ${prefix}bot
+> ${prefix}ping
+> ${prefix}profile
+> ${prefix}hightRole
+> ${prefix}nick
+> ${prefix}invite
+> ${prefix}avatar 
+> ${prefix}member
+> ${prefix}time
+
+** 
+
+`);
+    message.channel.send(help);
+  }
+});
+client.on("message", async message => {
+  if (message.content.startsWith(prefix + "fhelp")) {
+    let help = new Discord.MessageEmbed()
+      .setColor("RANDOM")
+    .setTitle("**Fun CmD**")
+      .setFooter(message.author.username, message.author.displayAvatarURL)
+    .setTimestamp()
+
+
+      .setThumbnail(message.guild.iconURL)
+   .setDescription(`
+**
+> ${prefix}muslim
+> ${prefix}love
+> ${prefix}boom
+> ${prefix}slap
+> ${prefix}kiss
+> ${prefix}hug
+** 
+
+`);
+    message.channel.send(help);
+  }
+});
+client.on("message", async message => {
+  if (message.content.startsWith(prefix + "mhelp")) {
+    let help = new Discord.MessageEmbed()
+      .setColor("RANDOM")
+    .setTitle("**MOD CmD**")
+      .setFooter(message.author.username, message.author.displayAvatarURL)
+    .setTimestamp()
+
+
+      .setThumbnail(message.guild.iconURL)
+   .setDescription(`
+**
+> ${prefix}ban
+> ${prefix}kick
+> ${prefix}mute
+> ${prefix}unmute
+> ${prefix}bans
+> ${prefix}say
+> ${prefix}unban[userid/all]
+> ${prefix}lock
+> ${prefix}unlock
+> ${prefix}nick
+> ${prefix}slowmode
+> ${prefix}active vc
+> ${prefix}channeltopic【enter mess】
+> ${prefix}move
+** 
+
+`);
+    message.channel.send(help);
+  }
+});
