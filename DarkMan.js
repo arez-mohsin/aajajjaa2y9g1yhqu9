@@ -20,12 +20,12 @@ const dateFormat = require("dateformat");
 var table = require("table").table;
 const Discord = require("discord.js");
 const cmd = require("node-cmd");
-const prefix = "-";
+const prefix = "s-";
 client.login("");
 client.on("ready", async () => {
   console.log(`Logged in as ${client.user.username}!`);
   client.user.setStatus("idle");
-  client.user.setActivity(`${prefix}help | By Dark Man`, { type: "PLAYING" });
+  client.user.setActivity(`${prefix}he`, { type: "PLAYING" });
   client.guilds.cache.forEach(g => {
     if (g.member(client.user).hasPermission("ADMINISTRATOR")) {
       g.fetchInvites().then(guildInvites => {});
@@ -38,7 +38,7 @@ client.on("ready", async () => {
 client.on("message", async message => {
   if (message.content.startsWith(prefix + "help")) {
     let help = new Discord.MessageEmbed()
-    .setColor(color)
+    .setColor(RA)
       .setThumbnail(message.author.avatarURL({dynamic: "true"}))
     
       .setDescription(`
@@ -76,7 +76,7 @@ const ghallat = "";
 const ghallatw = "";
 const logosec = "";
 const warn = "⚠";
-const color = "#0000";
+const color = "RANDOM";
 let anti = JSON.parse(fs.readFileSync("./antigreff.json", "UTF8"));
 let config = JSON.parse(fs.readFileSync("./configg.json", "UTF8"));
 client.on("message", message => {
@@ -104,19 +104,19 @@ client.on("message", message => {
     if (!message.member.hasPermission("OWNERSHIP")) return;
     if (message.content.startsWith(prefix + "anti ban")) {
       if (!num)
-        return message.channel.send("**" + ghallat + " | Type A `Number` .**");
+        return message.channel.send("**<a:warning:786619837383573544> | Type A `Number` .**");
       if (isNaN(num))
         return message.channel.send(
-          "**" + ghallat + " | Only Type A `Number` .**"
+          "**<a:warning:786619837383573544> | Only Type A `Number` .**"
         );
       config[message.guild.id].banLimit = num;
       message.channel.send(
-        `**✔ | Changed To : ${config[message.guild.id].banLimit} **`
+        `**<:yes:786618192734060562> | Changed To : ${config[message.guild.id].banLimit} **`
       );
     }
     if (message.content.startsWith(prefix + "anti kick")) {
       if (!num)
-        return message.channel.send("**" + ghallat + " | Type A `Number` .**");
+        return message.channel.send("**<a:warning:786619837383573544>| Type A `Number` .**");
       if (isNaN(num))
         return message.channel.send(
           "**" + ghallat + " | Only Type A `Number` .**"
