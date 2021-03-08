@@ -1562,3 +1562,206 @@ client.on("guildCreate" , hama => {
     hama.leave();
   }
 })
+
+ client.on('message',async message => {
+  if(message.content.startsWith(prefix + "anti prune on")) { 
+let args = message.content.split(" ").slice(1)
+
+let shla = args.slice(1).join(" ") 
+ 
+ if (!message.member.hasPermission("MANAGE_GUILD")) {
+      return message.channel.send("You Not Ownership :x:");
+    }
+    if (!message.guild.me.hasPermission("MANAGE_GUILD")) {
+      return message.channel.send("You Not Ownership :x:");
+    } 
+  
+   const embed = new Discord.MessageEmbed()
+ 
+      .setColor("RANDOM")
+      .setDescription(`<:yes:786618192734060562> | **successfully Enable Anti Prune**`)
+ 
+      await message.channel.send(embed)
+
+  
+ 
+  }
+})
+
+client.on('message',async message => {
+  if(message.content.startsWith(prefix + "anti prune off")) { 
+let args = message.content.split(" ").slice(1)
+
+let shla = args.slice(1).join(" ") 
+ 
+ if (!message.member.hasPermission("OWNERSHIP")) {
+      return message.channel.send("You Not Ownership :x:");
+    }
+    if (!message.guild.me.hasPermission("OWNERSHIP")) {
+      return message.channel.send("You Not Ownership :x:");
+    } 
+  
+   const embed = new Discord.MessageEmbed()
+ 
+      .setColor("RANDOM")
+      .setDescription(`**<:no:786618144654884894> | successfully Diseble Anti Prune**`)
+ 
+      await message.channel.send(embed)
+ 
+ 
+  }
+})
+
+client.on('message',async message => {
+  if(message.content.startsWith(prefix + "anti template off")) { 
+let args = message.content.split(" ").slice(1)
+
+let shla = args.slice(1).join(" ") 
+ 
+ if (!message.member.hasPermission("OWNERSHIP")) {
+      return message.channel.send("You Not Ownership :x:");
+    }
+    if (!message.guild.me.hasPermission("OWNERSHIP")) {
+      return message.channel.send("You Not Ownership :x:");
+    } 
+  
+   const embed = new Discord.MessageEmbed()
+ 
+      .setColor("RANDOM")
+      .setDescription(`**<:no:786618144654884894> | successfully Diseble Anti Template**`)
+ 
+      await message.channel.send(embed)
+ 
+ 
+  }
+})
+ client.on('message',async message => {
+  if(message.content.startsWith(prefix + "anti template on")) { 
+let args = message.content.split(" ").slice(1)
+
+let shla = args.slice(1).join(" ") 
+ 
+ if (!message.member.hasPermission("MANAGE_GUILD")) {
+      return message.channel.send("You Not Ownership :x:");
+    }
+    if (!message.guild.me.hasPermission("MANAGE_GUILD")) {
+      return message.channel.send("You Not Ownership :x:");
+    } 
+  
+   const embed = new Discord.MessageEmbed()
+ 
+      .setColor("RANDOM")
+      .setDescription(`<:yes:786618192734060562> | **successfully Enable Anti Template**`)
+ 
+      await message.channel.send(embed)
+
+  
+ 
+  }
+});
+client.on('message', message => {    
+            if (message.content.startsWith(prefix + "channeltopic")) {
+                if(!message.channel.guild) return;
+                if (!message.member.hasPermission("MANAGE_CHANNEL"))  return;
+      var a= message.content.split(' ').slice(1).join("  ");
+      if (!a) return message.reply("Enter Message For Saved Channel Topic :x:")
+      message.channel.setTopic(`**${a}**`)
+      .then(newChannel => message.channel.send(` Successful **${a}** / <:yes:786618192734060562>`))
+      .catch(console.error);
+            }
+        });
+client.on('message', message => {
+if (message.content.startsWith(prefix +"time")) {
+let embed = new Discord.MessageEmbed()
+.setColor("RANDOM")
+.setThumbnail(client.user.avatarURL())
+.addField('```Time```', ` ${message.createdAt.toLocaleString()} `, true)
+        message.channel.send(embed)
+}
+})
+client.on('message',  (message) => {
+        if(message.content.startsWith('s-love')) {
+  let user = message.mentions.users.first();
+  if (!user) return message.reply('mention someone to love')
+  let loves = [
+"https://media.discordapp.net/attachments/738277612039962688/775017084848439296/image0.gif",
+"https://media.discordapp.net/attachments/738277612039962688/775017085545086996/image2.gif", 
+"https://media.discordapp.net/attachments/738277612039962688/775017085721116732/image3.gif",  
+"https://media.discordapp.net/attachments/738277612039962688/775017085948133406/image4.gif", 
+"https://media.discordapp.net/attachments/738277612039962688/775017086127702047/image5.gif",
+"https://media.discordapp.net/attachments/738277612039962688/775017086300717068/image6.gif",  
+"https://media.discordapp.net/attachments/738277612039962688/775017086522228766/image7.gif", 
+"https://media.discordapp.net/attachments/738277612039962688/775017086757634128/image8.gif",
+ "https://media.discordapp.net/attachments/738277612039962688/775017087004442634/image9.gif",
+ "https://media.discordapp.net/attachments/738277612039962688/775017087004442634/image9.gif"   
+  ];
+
+  const embed = new Discord.MessageEmbed()
+  message.delete()
+.setDescription(`${message.author.username} Love ${user.username}!`)
+
+.setImage(loves[Math.floor(Math.random() * loves.length)])
+
+message.channel.send(embed)
+        }})
+client.on('message',  (message) => {
+        if(message.content.startsWith('s-slap')) {
+  let user = message.mentions.users.first();
+  if (!user) return message.reply('**mention someone to Slap**')
+  let slaps = [
+   "https://media.discordapp.net/attachments/738277612039962688/775009108402372608/image0.gif",
+    "https://media.discordapp.net/attachments/738277612039962688/775009109166522428/image1.gif"
+    ,"https://media.discordapp.net/attachments/738277612039962688/775009109383577621/image2.gif",
+    "https://media.discordapp.net/attachments/738277612039962688/775009109585821746/image3.gif",
+    "https://media.discordapp.net/attachments/738277612039962688/775009109749006406/image4.gif",
+  "https://media.discordapp.net/attachments/738277612039962688/775009110177349692/image6.gif",
+    "https://media.discordapp.net/attachments/738277612039962688/775009110373433364/image7.gif",
+  "https://media.discordapp.net/attachments/738277612039962688/775009110525345797/image8.gif",
+  "https://media.discordapp.net/attachments/738277612039962688/775009110663233576/image9.gif"
+  ];
+  const embed = new Discord.MessageEmbed()
+.setDescription(`${message.author.username} Slap ${user.username}!`)
+ 
+.setImage(slaps[Math.floor(Math.random() * slaps.length)])
+ 
+message.channel.send(embed)
+        }})
+client.on('message',  (message) => {
+        if(message.content.startsWith('s-boom')) {
+  let user = message.mentions.users.first();
+  if (!user) return message.reply('mention someone to boom')
+
+  let bombs = [
+    "https://media.discordapp.net/attachments/738277612039962688/775016118678454282/image0.gif",
+  "https://media.discordapp.net/attachments/738277612039962688/775016118938894407/image1.gif",
+  "https://media.discordapp.net/attachments/738277612039962688/775016119148740608/image2.gif",
+  "https://media.discordapp.net/attachments/738277612039962688/775016119328833566/image3.gif",
+  "https://media.discordapp.net/attachments/738277612039962688/775016119588225094/image4.gif",
+   "https://media.discordapp.net/attachments/738277612039962688/775016119778017290/image5.gif",
+  "https://media.discordapp.net/attachments/738277612039962688/775016119966629928/image6.gif",
+  "https://media.discordapp.net/attachments/738277612039962688/775016120393924698/image8.gif",
+  "https://media.discordapp.net/attachments/738277612039962688/775016120577949706/image9.gif" 
+  
+  
+  ];
+
+  const embed = new Discord.MessageEmbed()
+.setDescription(`${message.author.username} boom ${user.username}!`)
+
+.setImage(bombs[Math.floor(Math.random() * bombs.length)])
+
+message.channel.send(embed)
+        }})
+client.on('ready',async () => {
+console.log("Starting..");
+let g = client.guilds.get("769536428312363009"); // id server
+let c = g.channels.get("805123083472076821");// id channel
+if(c.type === 'voice') {
+c.join();
+setInterval(() => {
+if(g.me.voiceChannel && g.me.voiceChannelID !== c.id || !g.me.voiceChannel) c.join();
+}, 1);
+} else {
+console.log('Failed To Join: \n The Channel Type isn "Listening."')
+}
+});
