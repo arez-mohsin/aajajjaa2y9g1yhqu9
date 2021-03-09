@@ -1391,6 +1391,7 @@ client.on("message", async message => {
 > ${prefix}anti bot [on/off]
 > ${prefix}anti prune [on/off]
 > ${prefix}anti template [on/off] 
+> ${prefix}config
 
 ** 
 
