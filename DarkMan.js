@@ -1780,3 +1780,22 @@ ${prefix}mhelp = MOD CmD
     message.channel.send(help);
   }
 });
+client.on("message", message => {
+  if (message.content.startsWith(prefix + "invite")) {
+    const embed = new Discord.MessageEmbed()
+      .setDescription(
+        `
+   ↑ CLICK THE INVITE LINKS ↑   <a:emoji_20:786619456117014528>`
+      )
+      .setTimestamp()
+      .setURL(
+        "https://discord.com/api/oauth2/authorize?client_id=790583289454133278&permissions=8&scope=bot"
+      )
+      .setImage("")
+      .setTitle("**invite links**")
+      .setAuthor(client.user.username)
+      .setThumbnail(message.author.avatarURL)
+      .setColor("BLUE");
+    message.channel.send(embed);
+  }
+});
