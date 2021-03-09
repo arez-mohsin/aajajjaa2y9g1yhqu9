@@ -855,7 +855,7 @@ client.on('ready', () => {
 
 client.on('message', msg => {
   if (msg.content === 'Slaw') {
-    msg.reply('<a:slaw:786289752570986497> لە تۆش ❤');
+    msg.reply(' لە تۆش ❤<a:slaw:786289752570986497>');
   }
 });
 client.on('message', msg => {
