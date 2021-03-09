@@ -1799,3 +1799,55 @@ client.on("message", message => {
     message.channel.send(embed);
   }
 });
+client.on("message", message => {
+  if (message.content === prefix + "config") {
+
+     if (message.author.id !== message.guild.ownerID) return;
+    if (!message.channel.guild)
+      return message.channel.send(
+        "Sorry This Command Only For Servers."
+      );
+    let embed = new Discord.MessageEmbed()
+      .setTitle("")
+       
+      .setURL("")
+       
+      .setDescription(
+
+
+
+
+        `**Anti Ban Is** :
+${config[message.guild.id].banLimit}
+
+•••••
+**Anti Kick Is** :
+
+${config[message.guild.id].kickLimits}
+•••••
+**Anti ChannelD Is** :
+
+${config[message.guild.id].chaDelLimit}
+•••••
+**Anti ChannelC Is** :
+
+${config[message.guild.id].chaCrLimit}
+•••••
+**Anti RoleD Is** :
+
+${config[message.guild.id].roleDelLimit}
+•••••
+**Anti RoleC Is** :
+
+${config[message.guild.id].roleCrLimits}
+•••••
+**Anti Time Is** :
+
+ ${config[message.guild.id].time}`
+      )
+      .setColor('YELLOW')
+      .setThumbnail(message.author.avatarURL())
+      .setFooter(`${message.author.tag}`, message.author.avatarURL());
+    message.channel.send({ embed });
+  }
+});
