@@ -846,7 +846,7 @@ client.on('ready', () => {
 
 client.on('message', msg => {
   if (msg.content === 'slaw') {
-    msg.reply('<a:slaw:786289752570986497> لە تۆش ❤');
+    msg.reply('لە تۆش ❤<a:slaw:786289752570986497>');
   }
 });
 client.on('ready', () => {
@@ -860,7 +860,7 @@ client.on('message', msg => {
 });
 client.on('message', msg => {
   if (msg.content === 'SLAW') {
-    msg.reply('<a:slaw:786289752570986497> لە تۆش ❤');
+    msg.reply(' لە تۆش ❤<a:slaw:786289752570986497>');
   }
 });
 client.on('message', msg => {
