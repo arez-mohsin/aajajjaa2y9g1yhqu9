@@ -1375,7 +1375,7 @@ client.on("message", message => {
 client.on("message", async message => {
   if (message.content.startsWith(prefix + "shelp")) {
     let help = new Discord.MessageEmbed()
-      .setColor("RANDOM")
+      .setColor("BLUE")
     .setTitle("**Security CmD**")
       .setFooter(message.author.username, message.author.displayAvatarURL)
     .setTimestamp()
@@ -1403,7 +1403,7 @@ client.on("message", async message => {
 client.on("message", async message => {
   if (message.content.startsWith(prefix + "phelp")) {
     let help = new Discord.MessageEmbed()
-      .setColor("RANDOM")
+      .setColor("BLUE")
     .setTitle("**Public CmD**")
       .setFooter(message.author.username, message.author.displayAvatarURL)
     .setTimestamp()
@@ -1432,7 +1432,7 @@ client.on("message", async message => {
 client.on("message", async message => {
   if (message.content.startsWith(prefix + "fhelp")) {
     let help = new Discord.MessageEmbed()
-      .setColor("RANDOM")
+      .setColor("BLUE")
     .setTitle("**Fun CmD**")
       .setFooter(message.author.username, message.author.displayAvatarURL)
     .setTimestamp()
@@ -1456,7 +1456,7 @@ client.on("message", async message => {
 client.on("message", async message => {
   if (message.content.startsWith(prefix + "mhelp")) {
     let help = new Discord.MessageEmbed()
-      .setColor("RANDOM")
+      .setColor("BLUE")
     .setTitle("**MOD CmD**")
       .setFooter(message.author.username, message.author.displayAvatarURL)
     .setTimestamp()
@@ -1751,7 +1751,7 @@ console.log('Failed To Join: \n The Channel Type isn "Listening."')
 client.on("message", async message => {
   if (message.content.startsWith(prefix + "help")) {
     let help = new Discord.MessageEmbed()
-      .setColor("RANDOM")
+      .setColor("BLUE")
     .setTitle("**Help Command**")
       .setFooter(message.author.username, message.author.displayAvatarURL)
     .setTimestamp()
