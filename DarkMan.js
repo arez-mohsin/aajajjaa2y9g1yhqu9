@@ -21,10 +21,10 @@ var table = require("table").table;
 const Discord = require("discord.js");
 const cmd = require("node-cmd");
 const prefix = "s-";
-client.login("NzkwNTgzMjg5NDU0MTMzMjc4.X-CuEA.TSEB09q0uIrbZRulXJIIib34jG0");
+client.login("NzkwNTgzMjg5NDU0MTMzMjc4.X-CuEA.9-WgZzfQ8QPkqtOwyRoANfjYEeE");
 client.on("ready", async () => {
   console.log(`Logged in as ${client.user.username}!`);
-  client.user.setStatus("idle");
+  client.user.setStatus("online");
   client.user.setActivity(`${prefix}help`, { type: "PLAYING" });
   client.guilds.cache.forEach(g => {
     if (g.member(client.user).hasPermission("ADMINISTRATOR")) {
@@ -1801,9 +1801,8 @@ client.on("message", message => {
   }
 });
 client.on("message", message => {
-  if (message.content === prefix + "config") {
-
-     if (message.author.id !== message.guild.ownerID) return;
+  if (message.content === prefix + "settings") {
+ if (message.author.id !== message.guild.ownerID) return;
     if (!message.channel.guild)
       return message.channel.send(
         "Sorry This Command Only For Servers."
@@ -1818,35 +1817,34 @@ client.on("message", message => {
 
 
 
-        `**Anti Ban Is** :
+        `**<:enable:819157809865162782> Anti Ban Is** :
 ${config[message.guild.id].banLimit}
 
-•••••
-**Anti Kick Is** :
-
+**<:enable:819157809865162782> Anti Kick Is** :
 ${config[message.guild.id].kickLimits}
 •••••
-**Anti ChannelD Is** :
 
+**<:enable:819157809865162782> Anti ChannelD Is** :
 ${config[message.guild.id].chaDelLimit}
-•••••
-**Anti ChannelC Is** :
-
+**<:enable:819157809865162782> Anti ChannelC Is** :
 ${config[message.guild.id].chaCrLimit}
-•••••
-**Anti RoleD Is** :
 
+
+
+**<:enable:819157809865162782> Anti RoleD Is** :
 ${config[message.guild.id].roleDelLimit}
-•••••
-**Anti RoleC Is** :
-
+**<:enable:819157809865162782> Anti RoleC Is** :
 ${config[message.guild.id].roleCrLimits}
-•••••
-**Anti Time Is** :
 
- ${config[message.guild.id].time}`
+
+**<:enable:819157809865162782> Anti Time Is** :
+${config[message.guild.id].time}
+**<:enable:819157809865162782> Anti Bot Is ** : Enable
+**<:enable:819157809865162782> Anti Problem Is ** : Enable
+**<:enable:819157809865162782> Anti Prune Is ** : Enable
+**<:enable:819157809865162782> Anti Template Is ** : Enable`
       )
-      .setColor('YELLOW')
+      .setColor("GREEN")
       .setThumbnail(message.author.avatarURL())
       .setFooter(`${message.author.tag}`, message.author.avatarURL());
     message.channel.send({ embed });
