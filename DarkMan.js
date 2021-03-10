@@ -1893,3 +1893,28 @@ let shla = args.slice(1).join(" ")
  
   }
 })
+client.on('message', message => { 
+
+if (!message.guild) return; 
+
+if (message.content === 's-vc') { 
+ if (message.member.voiceChannel) { 
+
+message.member.voiceChannel.join() 
+
+.then(connection => { 
+
+
+}) 
+
+.catch(console.log); 
+
+} else { 
+
+message.reply('**You Stay In Voice 😉**'); 
+
+} 
+
+} 
+
+});
