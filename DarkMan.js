@@ -1391,7 +1391,8 @@ client.on("message", async message => {
 > ${prefix}anti bot [on/off]
 > ${prefix}anti prune [on/off]
 > ${prefix}anti template [on/off] 
-> ${prefix}config
+> ${prefix}anti problem
+> ${prefix}settings
 
 ** 
 
@@ -1817,28 +1818,22 @@ client.on("message", message => {
 
 
 
-        `**<:enable:819157809865162782> Anti Ban Is** :
-${config[message.guild.id].banLimit}
+        `**<:enable:819157809865162782> Anti Ban Is** : ${config[message.guild.id].banLimit}
 
-**<:enable:819157809865162782> Anti Kick Is** :
-${config[message.guild.id].kickLimits}
+**<:enable:819157809865162782> Anti Kick Is** : ${config[message.guild.id].kickLimits}
 •••••
 
 **<:enable:819157809865162782> Anti ChannelD Is** :
 ${config[message.guild.id].chaDelLimit}
-**<:enable:819157809865162782> Anti ChannelC Is** :
-${config[message.guild.id].chaCrLimit}
+**<:enable:819157809865162782> Anti ChannelC Is** : ${config[message.guild.id].chaCrLimit}
 
 
 
-**<:enable:819157809865162782> Anti RoleD Is** :
-${config[message.guild.id].roleDelLimit}
-**<:enable:819157809865162782> Anti RoleC Is** :
-${config[message.guild.id].roleCrLimits}
+**<:enable:819157809865162782> Anti RoleD Is** : ${config[message.guild.id].roleDelLimit}
+**<:enable:819157809865162782> Anti RoleC Is** : ${config[message.guild.id].roleCrLimits}
 
 
-**<:enable:819157809865162782> Anti Time Is** :
-${config[message.guild.id].time}
+**<:enable:819157809865162782> Anti Time Is** : ${config[message.guild.id].time}
 **<:enable:819157809865162782> Anti Bot Is ** : Enable
 **<:enable:819157809865162782> Anti Problem Is ** : Enable
 **<:enable:819157809865162782> Anti Prune Is ** : Enable
@@ -1850,3 +1845,51 @@ ${config[message.guild.id].time}
     message.channel.send({ embed });
   }
 });
+ client.on('message',async message => {
+  if(message.content.startsWith(prefix + "anti problem on")) { 
+let args = message.content.split(" ").slice(1)
+
+let shla = args.slice(1).join(" ") 
+ 
+ if (!message.member.hasPermission("OWNERSHIP")) {
+      return message.channel.send("You Not Ownership :x:");
+    }
+    if (!message.guild.me.hasPermission("MANAGE_GUILD")) {
+      return message.channel.send("You Not Ownership :x:");
+    } 
+  
+   const embed = new Discord.MessageEmbed()
+ 
+      .setColor("RANDOM")
+      .setDescription(`<:yes:786618192734060562> | **successfully Enable Anti Problem**`)
+ 
+      await message.channel.send(embed)
+
+  
+ 
+  }
+})
+
+client.on('message',async message => {
+  if(message.content.startsWith(prefix + "anti problem off")) { 
+let args = message.content.split(" ").slice(1)
+
+let shla = args.slice(1).join(" ") 
+ 
+ if (!message.member.hasPermission("OWNERSHIP")) {
+      return message.channel.send("You Not Ownership :x:");
+    }
+    if (!message.guild.me.hasPermission("OWNERSHIP")) {
+      return message.channel.send("You Not Ownership :x:");
+    } 
+  
+   const embed = new Discord.MessageEmbed()
+ 
+      .setColor("GREEN")
+      .setDescription(`**<:no:786618144654884894> | successfully Diseble Anti Problem**`)
+ 
+      await message.channel.send(embed)
+ 
+ 
+  }
+})
