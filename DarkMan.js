@@ -1539,12 +1539,7 @@ client.on('message',  (message) => {
 message.channel.send(embed)
            
         }})
-client.on("guildCreate" , hama => {
-  if(hama.memberCount < 50 ){
-    console.log(`  name ( ${hama.name} ) zhmaray memberakan ( ${hama.memberCount}) created by MrHAMA`)//by MrHAMA
-    hama.leave();
-  }
-})
+
 
  client.on('message',async message => {
   if(message.content.startsWith(prefix + "anti prune on")) { 
