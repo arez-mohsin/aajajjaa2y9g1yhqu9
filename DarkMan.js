@@ -21,7 +21,7 @@ var table = require("table").table;
 const Discord = require("discord.js");
 const cmd = require("node-cmd");
 const prefix = "s-";
-client.login("NzkwNTgzMjg5NDU0MTMzMjc4.X-CuEA.9-WgZzfQ8QPkqtOwyRoANfjYEeE");
+client.login("");
 client.on("ready", async () => {
   console.log(`Logged in as ${client.user.username}!`);
   client.user.setStatus("online");
@@ -58,7 +58,7 @@ const ghallat = "";
 const ghallatw = "";
 const logosec = "";
 const warn = "⚠";
-const color = "RANDOM";
+const color = "BLUE";
 let anti = JSON.parse(fs.readFileSync("./antigreff.json", "UTF8"));
 let config = JSON.parse(fs.readFileSync("./configg.json", "UTF8"));
 client.on("message", message => {
