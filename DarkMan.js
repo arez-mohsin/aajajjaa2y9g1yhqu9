@@ -21,7 +21,7 @@ var table = require("table").table;
 const Discord = require("discord.js");
 const cmd = require("node-cmd");
 const prefix = "s-";
-client.login("");
+client.login("NzkwNTgzMjg5NDU0MTMzMjc4.X-CuEA.7m0kO6KNTJ2OTyX2M1djSXqs-1U");
 client.on("ready", async () => {
   console.log(`Logged in as ${client.user.username}!`);
   client.user.setStatus("online");
@@ -1755,23 +1755,23 @@ client.on("message", async message => {
       .setThumbnail(message.guild.iconURL)
    .setDescription(`
  **
-┏━━━━━°❀•°:🎀 - 🎀:°•❀°━━━━━┓
+┏━━━━•❅•°•❈ - •°•❅•━━━━┓
 ${prefix}shelp = Security CmD
 
-▓▓▓▓▓▓ <a:emoji_35:786619950328315955> ▓▓▓▓▓▓
+ <a:emoji_35:786619950328315955> 
 
 ${prefix}phelp = Public CmD
 
-▓▓▓▓▓▓ <a:emoji_35:786619950328315955> ▓▓▓▓▓▓
+ <a:emoji_35:786619950328315955> 
 
 ${prefix}fhelp = Fun CmD
 
-▓▓▓▓▓▓ <a:emoji_35:786619950328315955> ▓▓▓▓▓▓
+ <a:emoji_35:786619950328315955> 
 
 ${prefix}mhelp = MOD CmD
 
-▓▓▓▓▓▓ <a:emoji_35:786619950328315955> ▓▓▓▓▓▓
-┗━━━━━°❀•°:🎀 - 🎀:°•❀°━━━━━┛
+ <a:emoji_35:786619950328315955> 
+┗━━━━•❅•°•❈ - •°•❅•━━━━┛
 **
 `);
     message.channel.send(help);
