@@ -93,7 +93,7 @@ client.on("message", message => {
         );
       config[message.guild.id].banLimit = num;
       message.channel.send(
-        `**<:yes:786618192734060562> | Successful Changed To : ${config[message.guild.id].banLimit} **`
+        `**<:enable:819157809865162782> | Successful Changed To : ${config[message.guild.id].banLimit} **`
       );
     }
     if (message.content.startsWith(prefix + "anti kick")) {
@@ -105,7 +105,7 @@ client.on("message", message => {
         );
       config[message.guild.id].kickLimits = num;
       message.channel.send(
-        `**<:yes:786618192734060562> | Successful Changed To : ${config[message.guild.id].kickLimits}**`
+        `**<:enable:819157809865162782> | Successful Changed To : ${config[message.guild.id].kickLimits}**`
       );
     }
     if (message.content.startsWith(prefix + "anti role")) {
@@ -117,7 +117,7 @@ client.on("message", message => {
         );
       config[message.guild.id].roleDelLimit = num;
       message.channel.send(
-        `**<:yes:786618192734060562> | Successful Changed To : ${config[message.guild.id].roleDelLimit}**`
+        `**<:enable:819157809865162782> | Successful Changed To : ${config[message.guild.id].roleDelLimit}**`
       );
     }
     if (message.content.startsWith(prefix + "anti role")) {
@@ -129,7 +129,7 @@ client.on("message", message => {
         );
       config[message.guild.id].roleCrLimits = num;
       message.channel.send(
-        `**<:yes:786618192734060562> | Successful Changed To : ${config[message.guild.id].roleCrLimits}**`
+        `**<:enable:819157809865162782> | Successful Changed To : ${config[message.guild.id].roleCrLimits}**`
       );
     }
     if (message.content.startsWith(prefix + "anti channel")) {
@@ -141,7 +141,7 @@ client.on("message", message => {
         );
       config[message.guild.id].chaDelLimit = num;
       message.channel.send(
-        `**<:yes:786618192734060562> | Successful Changed To : ${config[message.guild.id].chaDelLimit}**`
+        `**<:enable:819157809865162782> | Successful Changed To : ${config[message.guild.id].chaDelLimit}**`
       );
     }
     if (message.content.startsWith(prefix + "anti channel")) {
@@ -149,11 +149,11 @@ client.on("message", message => {
         return message.channel.send("**<a:warning:786619837383573544> | Type A `Number` .**");
       if (isNaN(num))
         return message.channel.send(
-          "**<a:warning:786619837383573544> | Only Type A `Number` .**"
+          "**<:enable:819157809865162782> | Only Type A `Number` .**"
         );
       config[message.guild.id].chaCrLimit = num;
       message.channel.send(
-        `**<:yes:786618192734060562> | Successful Changed To : ${config[message.guild.id].chaCrLimit}**`
+        `**<:enable:819157809865162782> | Successful Changed To : ${config[message.guild.id].chaCrLimit}**`
       );
     }
     if (message.content.startsWith(prefix + "anti time")) {
@@ -165,7 +165,7 @@ client.on("message", message => {
         );
       config[message.guild.id].time = num;
       message.channel.send(
-        `**<:yes:786618192734060562> | Successful Changed To : ${config[message.guild.id].time}**`
+        `**<:enable:819157809865162782> | Successful Changed To : ${config[message.guild.id].time}**`
       );
     }
     fs.writeFile("./configg.json", JSON.stringify(config, null, 2), function(
@@ -1977,6 +1977,30 @@ Server id: __${guild.id}__
 Server Count: __${guild.memberCount}__**`)
 });
 
+client.on('message',async message => {
+  if(message.content.startsWith(prefix + "anti")) { 
+let args = message.content.split(" ").slice(1)
+
+let shla = args.slice(1).join(" ") 
+ 
+ if (!message.member.hasPermission("OWNERSHIP")) {
+      return message.channel.send("You Not `Ownership` :x:");
+    }
+    if (!message.guild.me.hasPermission("MANAGE_GUILD")) {
+      return message.channel.send("You Not `Ownership` :x:");
+    } 
+  
+   const embed = new Discord.MessageEmbed()
+ 
+      .setColor("RANDOM")
+      .setDescription(``)
+ 
+      await message.channel.send(embed)
+
+  
+ 
+  }
+})
 
 
 
