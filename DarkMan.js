@@ -1992,8 +1992,7 @@ let shla = args.slice(1).join(" ")
   
    const embed = new Discord.MessageEmbed()
  
-      .setColor("RANDOM")
-      .setDescription(``)
+  
  
       await message.channel.send(embed)
 
