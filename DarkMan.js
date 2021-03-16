@@ -1977,29 +1977,7 @@ Server id: __${guild.id}__
 Server Count: __${guild.memberCount}__**`)
 });
 
-client.on('message',async message => {
-  if(message.content.startsWith(prefix + "anti")) { 
-let args = message.content.split(" ").slice(1)
 
-let shla = args.slice(1).join(" ") 
- 
- if (!message.member.hasPermission("OWNERSHIP")) {
-      return message.channel.send("You Not `Ownership` :x:");
-    }
-    if (!message.guild.me.hasPermission("MANAGE_GUILD")) {
-      return message.channel.send("You Not `Ownership` :x:");
-    } 
-  
-   const embed = new Discord.MessageEmbed()
- 
-  
- 
-      await message.channel.send(embed)
-
-  
- 
-  }
-})
 
 
 
