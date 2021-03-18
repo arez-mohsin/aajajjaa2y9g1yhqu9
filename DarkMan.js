@@ -21,11 +21,11 @@ var table = require("table").table;
 const Discord = require("discord.js");
 const cmd = require("node-cmd");
 const prefix = "s-";
-client.login("NzkwNTgzMjg5NDU0MTMzMjc4.X-CuEA.7m0kO6KNTJ2OTyX2M1djSXqs-1U");
+client.login("NzkwNTgzMjg5NDU0MTMzMjc4.X-CuEA.Payz5QfnDWN4WLC8A-3spA43Gks");
 client.on("ready", async () => {
   console.log(`Logged in as ${client.user.username}!`);
-  client.user.setStatus("online");
-  client.user.setActivity(`${prefix}help`, { type: "PLAYING" });
+  client.user.setStatus("idle");
+  client.user.setActivity(`${prefix}help`, { type: "WACHNING" });
   client.guilds.cache.forEach(g => {
     if (g.member(client.user).hasPermission("ADMINISTRATOR")) {
       g.fetchInvites().then(guildInvites => {});
