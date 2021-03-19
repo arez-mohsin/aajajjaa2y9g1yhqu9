@@ -1373,7 +1373,7 @@ client.on("message", message => {
   }
 })
 client.on("message", async message => {
-  if (message.content.startsWith(prefix + "shelp")) {
+  if (message.content.startsWith(prefix + "anti help")) {
     let help = new Discord.MessageEmbed()
       .setColor("BLUE")
     .setTitle("**Security CmD**")
@@ -1756,7 +1756,7 @@ client.on("message", async message => {
    .setDescription(`
  **
 ┏━━━━•❅•°•❈ - •°•❅•━━━━┓
-${prefix}shelp = Security CmD
+${prefix}anti help = Security CmD
 
  <a:emoji_35:786619950328315955> 
 
