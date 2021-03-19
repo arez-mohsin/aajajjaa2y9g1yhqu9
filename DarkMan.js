@@ -24,8 +24,8 @@ const prefix = "s-";
 client.login("NzkwNTgzMjg5NDU0MTMzMjc4.X-CuEA.Payz5QfnDWN4WLC8A-3spA43Gks");
 client.on("ready", async () => {
   console.log(`Logged in as ${client.user.username}!`);
-  client.user.setStatus("idle");
-  client.user.setActivity(`${prefix}help`, { type: "WACHNING" });
+  client.user.setStatus("online");
+  client.user.setActivity(`${prefix}help`, { type: "PLAYING" });
   client.guilds.cache.forEach(g => {
     if (g.member(client.user).hasPermission("ADMINISTRATOR")) {
       g.fetchInvites().then(guildInvites => {});
